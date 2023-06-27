@@ -11,7 +11,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { firebaseAuth } from "../utils/firebase-config";
 import { useDispatch } from "react-redux";
 import { removeMovieFromLiked } from "../store";
-//import video from "../assets/video.mp4";
+import video from "../assets/video.mp4";
 
 export default React.memo(function Card({ index, movieData, isLiked = false }) {
   const navigate = useNavigate();
@@ -55,13 +55,13 @@ export default React.memo(function Card({ index, movieData, isLiked = false }) {
               alt="card"
               onClick={() => navigate("/player")}
             />
-            {/* <video
+            <video
               src={video}
               autoPlay={true}
               loop
               muted
               onClick={() => navigate("/player")}
-            /> */}
+            />
           </div>
           <div className="info-container flex column">
             <h3 className="name" onClick={() => navigate("/player")}>
